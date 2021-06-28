@@ -25,10 +25,10 @@ def compute_phi(name,event):
        if i['squirrel']:
         n10 += 1
         nx0 += 1
-      else:
+       else:
         n00 += 1
         nx0 += 1
-   return (n11*n00-n10*n01)/math.sqrt(nx1*nx0*n1x*n10)
+  return (n11*n00-n10*n01)/math.sqrt(nx1*nx0*n1x*n10)
 def compute_correlations(name):
   result={}
   d=load_journal(name)
