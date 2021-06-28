@@ -7,8 +7,8 @@ def load_journal(name):
     f = open(name,'r')
     data =f.read()
     f.close()
-    pdata= json.loads(data)
-    return pdata
+    parsed= json.loads(data)
+    return parsed
 
 def compute_phi(name, event):
     data= load_journal(name)
@@ -36,9 +36,9 @@ def compute_correlations(name):
     data = load_journal(name)
     result = {}
     for i in data:
-        for e in i['events']:
-            if e not in result.keys():
-                result[e]=compute_phi(name,e)
+        for j in i['events']:
+            if j not in result.keys():
+                result[j]=compute_phi(name,j)
     return result
 
 def diagnose(name):
