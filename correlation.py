@@ -42,9 +42,9 @@ def diagnose(name):
   result=compute_correlations(name)
   values=sorted(result.values())
   for k,v in result.items():
-    if v==values[0]:
+    if v == values[0]:
       n=k
-    if v=values[-1]:
+    if v == values[-1]:
       p=k
   return [p,n]
       
