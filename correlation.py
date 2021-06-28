@@ -1,8 +1,6 @@
 import json
 import math
 
-# Add the functions in this file
-
 def load_journal(name):
     f = open(name,'r')
     data =f.read()
